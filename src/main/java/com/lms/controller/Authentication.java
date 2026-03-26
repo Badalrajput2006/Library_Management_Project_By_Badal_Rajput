@@ -50,7 +50,7 @@ public class Authentication extends HttpServlet {
 			 }
 			 else
 			 {
-				 request.setAttribute("errorMessage", "invalid username and password");
+				 request.setAttribute("errorMessage", "Invalid username and password");
 				 RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/login.jsp");
 				 dispatcher.forward(request, response);
 			 }
