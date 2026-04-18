@@ -41,6 +41,7 @@ public class UserController extends HttpServlet {
 		
 		 if("showAddUser".equalsIgnoreCase(action)) 
 		 {
+			 request.setAttribute("currentPage", "addUser");
 			 RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/addUser.jsp");
 			 dispatcher.forward(request, response);
 		 }
@@ -103,6 +104,7 @@ public class UserController extends HttpServlet {
 			 
 			  if(userList!= null && userList.size()>0)
 			  {
+				  request.setAttribute("currentPage", "users");
 				  request.setAttribute("userList", userList);
 					 RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/userList.jsp");
 					 dispatcher.forward(request, response);
@@ -148,9 +150,9 @@ public class UserController extends HttpServlet {
 			 User user = new User();
 			 user.setFirstName(firstName);
 			 user.setLastName(lastName); 
+			 user.setEmail(email);
 			 user.setPhoneNo(phoneNo);
 			 user.setAddress(address);  
-			 user.setEmail(email);
 			 user.setUserId(userId);
 			 
 			 UserService userService = new UserServiceimpl();

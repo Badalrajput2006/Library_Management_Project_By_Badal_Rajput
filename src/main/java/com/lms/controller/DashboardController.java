@@ -66,7 +66,8 @@ public class DashboardController extends HttpServlet {
 					 }
 				 }
 			      request.setAttribute("issuedList", issuedList);
-			} 
+			}
+			request.setAttribute("currentPage", "dashboard");
 			request.setAttribute("dashboardStats", dashboardStats);
 		    RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/dashboard.jsp");
 		    dispatcher.forward(request, response);

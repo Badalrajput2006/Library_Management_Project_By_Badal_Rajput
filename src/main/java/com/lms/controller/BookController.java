@@ -51,7 +51,8 @@ public class BookController extends HttpServlet {
 		 System.out.println("action:" + action);
 		 
 		 if("showAddBook".equalsIgnoreCase(action)) 
-		 {
+		 { 
+			 request.setAttribute("currentPage", "addBook");
 			 RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/addBook.jsp");
 			 dispatcher.forward(request, response);
 		 }
@@ -88,7 +89,7 @@ public class BookController extends HttpServlet {
 				if(booklist != null && booklist.size()>0)
 				{
 					request.setAttribute("booklist",booklist);
-					request.setAttribute("SuccessMessage", "Book Added succesfully!!");
+					request.setAttribute("successMessage", "Book Added succesfully!!");
 				    RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/bookList.jsp");
 				    dispatcher.forward(request, response);
 				}
@@ -116,6 +117,7 @@ public class BookController extends HttpServlet {
 				
 				if(booklist != null && booklist.size()>0)
 				{
+					request.setAttribute("currentPage", "books");
 					request.setAttribute("booklist",booklist);
 					 
 				    RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/bookList.jsp");
@@ -236,6 +238,7 @@ public class BookController extends HttpServlet {
 			 
 			 if(bookList != null && bookList.size() > 0 && userList != null && userList. size() > 0) 
 			 {
+				 request.setAttribute("currentPage", "assignBook");	 
 			 request.setAttribute("bookList", bookList);
 			 request.setAttribute("userList", userList);
 			 RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/assignBook.jsp");
@@ -327,6 +330,7 @@ public class BookController extends HttpServlet {
 						 bookIssued.setDueDayStatus("Active");
 					 }
 				 }
+				 request.setAttribute("currentPage", "returnBook");
 			      request.setAttribute("issuedList", issuedList);
 			      RequestDispatcher dispatcher= request.getRequestDispatcher("jsp/returnBook.jsp");
 			      dispatcher.forward(request, response);

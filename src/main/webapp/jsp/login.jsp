@@ -117,7 +117,7 @@
 
         /* Form Controls from your Common CSS */
         .form-floating {
-            margin-bottom: 1.5rem !important;
+            margin-bottom: 1.5rem !important;  
         }
 
         .form-floating .form-control {
@@ -130,6 +130,7 @@
         .form-floating .form-control:focus {
             border-color: #1ABC9C;
             box-shadow: 0 0 0 0.25rem rgba(26, 188, 156, 0.15);
+            
         }
 
         .btn-login {

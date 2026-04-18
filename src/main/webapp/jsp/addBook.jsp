@@ -25,6 +25,15 @@
             <h1 class="h2"><i class="bi bi-book-fill me-2"></i>Add New Book</h1>
         </div>
 		
+		<!-- Success Message -->
+        <c:if test="${not empty successMessage}">
+            <div class="alert alert-success alert-dismissible fade show">
+                <c:out value="${successMessage}" />
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="alert"></button>
+            </div>
+        </c:if>
+        
 		 <c:if test="${not empty errorMessage }">
 		    <div class="alert alert-danger alert-dismissible fade show" role="alert">
 		        <c:out value="${errorMessage}"/>

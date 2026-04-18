@@ -253,16 +253,17 @@ public class UserDaoImpl implements UserDao {
 		
 		try
 		{
-			String sql = "Update users set first_name = ?, last_name = ?, phone_no = ?, address = ?"
+			String sql = "Update users set first_name = ?, last_name = ?, email=?, phone_no = ?, address = ?"
 					+ " where user_id = ?";
 			
 			conn = Dbutil.getConnection();
 			preparedStatement = conn.prepareStatement(sql);
 			preparedStatement.setString(1, user.getFirstName());
 			preparedStatement.setString(2, user.getLastName());
-			preparedStatement.setString(3, user.getPhoneNo());
-			preparedStatement.setString(4, user.getAddress());
-			preparedStatement.setLong(5, user.getUserId());
+			preparedStatement.setString(3, user.getEmail());
+			preparedStatement.setString(4, user.getPhoneNo());
+			preparedStatement.setString(5, user.getAddress());
+			preparedStatement.setLong(6, user.getUserId());
 		
 			
 			

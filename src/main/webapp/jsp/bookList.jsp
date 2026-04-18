@@ -29,9 +29,9 @@
             <a href="BookController?action=showAddBook" class="btn-modern"><i class="bi bi-plus-circle"></i>Add New Book</a>
         </div>
         
-		<c:if test="${not empty SuccessMessage }">
+		<c:if test="${not empty successMessage }">
 		    <div class="alert alert-success alert-dismissible fade show" role="alert">
-		        <c:out value="${SuccessMessage}"/>
+		        <c:out value="${successMessage}"/>
 		        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		    </div>
 		 </c:if>

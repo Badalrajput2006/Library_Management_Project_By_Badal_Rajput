@@ -134,7 +134,7 @@
         <div class="form-floating">
             <input type="email" class="form-control" id="email"
                    name="email" value="${user.email}"
-                   readonly>
+                   required >
             <label for="email">Email Address</label>
         </div>
     </div>

@@ -51,7 +51,7 @@
                                     name="bookId" required>
 
                                 <option value="" selected disabled>
-                                    Choose a book
+                                    
                                 </option>
 
                                 <c:forEach var="book" items="${bookList}">
@@ -61,10 +61,12 @@
                                 </c:forEach>
 
                             </select>
-                            <label for="bookId">
+                            
+                            <label for="bookId" style="color:black">
                                 <i class="bi bi-book-fill me-2"></i>
                                 Select Book
                             </label>
+                           
                             <div class="invalid-feedback">
         Please select a book.
     </div>
@@ -79,8 +81,7 @@
                                     name="userId"
                                     required>
 
-                                <option value="" selected disabled>
-                                    Choose a member
+                                <option value="" selected disabled> 
                                 </option>
 
                                 <c:forEach var="user" items="${userList}">
@@ -90,7 +91,7 @@
                                 </c:forEach>
 
                             </select>
-                            <label for="userId">
+                            <label for="userId" style="color:black">
                                 <i class="bi bi-person-fill me-2"></i>
                                 Select Member
                             </label>
